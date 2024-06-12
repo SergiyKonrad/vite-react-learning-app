@@ -1,4 +1,4 @@
-# React + Vite
+# React + Vite app with Learning Resourses and Popular YouTube Video Section
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
