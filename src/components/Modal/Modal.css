@@ -1,0 +1,32 @@
+dialog {
+  width: 600px;
+  height: 400px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  z-index: 100;
+  margin: 12em auto;
+}
+
+.modal-content {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.button-group a {
+  margin: 0.5em 0;
+}
+
+/* .close-button {
+  margin-top: 2em;
+} */

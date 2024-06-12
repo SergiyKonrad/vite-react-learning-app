@@ -1,0 +1,42 @@
+.button {
+  background-color: rgb(133, 220, 254);
+  padding: 0.8em 2em;
+  border: none;
+  min-width: 14em;
+  max-width: 20em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.8s, color 1.2s;
+  font-weight: 500;
+  margin: 0.5em;
+  display: inline-block;
+  color: rgb(20, 1, 104);
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #030ffd;
+  color: #fff;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.button a:hover {
+  color: #e8ff16;
+}
+
+.button.active {
+  background: #030ffd;
+  color: #fff;
+}
+
+.button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
