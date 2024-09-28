@@ -5,31 +5,35 @@ import { useState } from 'react'
 
 const Section = styled.section`
   padding: 2em 6em;
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   border-radius: 10px;
   max-width: 600px;
   margin: 0 auto;
-`
 
+  @media (prefers-color-scheme: dark) {
+    background-color: #333; /* Dark mode background */
+  }
+`
 const FormContainer = styled.div`
   display: flex;
   align-items: flex-start;
   height: 50vh;
   padding-top: 1em;
 `
-
 const Form = styled.form`
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 100%;
 `
-
 const Label = styled.label`
   margin-bottom: 0.8em;
   font-weight: bold;
-`
+   color: #000;
 
+    @media (prefers-color-scheme: dark) {
+    color: #fff; 
+`
 const Control = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -37,14 +41,24 @@ const Control = styled.input`
   margin-bottom: 1em;
   width: 100%;
   text-align: center;
-  box-sizing: border-box; /* Include padding and border in element's total width */
+  box-sizing: border-box; 
+ background-color: #fff;
+  color: #000; 
 
   &::placeholder {
     text-align: center;
+     color: #777;
     line-height: 1.5;
+
+   
+  @media (prefers-color-scheme: dark) {
+    // color: #555;
+
+    &::placeholder {
+      color: #777;
+    }
   }
 `
-
 const Textarea = styled.textarea`
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -54,11 +68,22 @@ const Textarea = styled.textarea`
   resize: vertical;
   text-align: center;
   box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
 
   &::placeholder {
     font-size: 1.1em;
+    // color: #555;
     text-align: center;
     line-height: 1.5;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    // color: #555;
+
+    &::placeholder {
+      color: #777;
+    }
   }
 `
 
@@ -156,10 +181,6 @@ export default function FeedbackSection() {
           <Button disabled={hasErr} isActive={!hasErr} type="submit">
             Submit
           </Button>
-
-          {/* <Button disabled={hasErr} isActive={false} type="submit">
-            Submit
-          </Button> */}
         </Form>
       </Section>
     </FormContainer>
