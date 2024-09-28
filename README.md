@@ -24,6 +24,11 @@ Currently, two official plugins are used in this project:
 
 ```bash
 git clone https://github.com/SergiyKonrad/vite-react-learning-app.git
+```
+
+Move to the project directory:
+
+```
 cd vite-react-app
 ```
 
