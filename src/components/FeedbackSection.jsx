@@ -74,11 +74,24 @@ export default function FeedbackSection() {
     setHasErr(event.target.value.trim().length === 0)
   }
 
+  function handleSubmit(event) {
+    event.preventDefault()
+
+    if (name.trim() === '' || email.trim() === '') {
+      setHasErr(true)
+      alert('Please fill in all fields.')
+    } else {
+      setHasErr(false)
+      // Handle the actual form submission logic (e.g., send data to API)
+      console.log('Form submitted:', { name, email })
+    }
+  }
+
   return (
     <FormContainer>
       <Section>
         <h3>Feedback</h3>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Label htmlFor="name">Your Name</Label>
           <Control
             type="text"
@@ -109,6 +122,10 @@ export default function FeedbackSection() {
           <Button disabled={hasErr} isActive={!hasErr} type="submit">
             Submit
           </Button>
+
+          {/* <Button disabled={hasErr} isActive={false} type="submit">
+            Submit
+          </Button> */}
         </Form>
       </Section>
     </FormContainer>

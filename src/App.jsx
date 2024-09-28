@@ -12,11 +12,16 @@ import EffectVideoSection from './components/EffectVideoSection'
 
 export default function App() {
   const [tab, setTab] = useState('main')
-  const [visible, setVisible] = useState(true)
+  //  or --- const [tab, setTab] = useState('')
+
+  // const [visible, setVisible] = useState(true)
 
   return (
     <>
-      {visible && <Header />}
+      {/* <button onClick={() => setVisible(!visible)}>Toggle Header</button> */}
+      {/* {visible && <Header />} */}
+
+      {<Header />}
       <main>
         <TabsSection active={tab} onChange={(current) => setTab(current)} />
         {/*  onChange={(active) => setTab(active)} /> */}
