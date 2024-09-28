@@ -1,16 +1,16 @@
 .button {
-  background-color: rgb(133, 220, 254);
+  background-color: rgb(106, 221, 253);
   padding: 0.8em 2em;
   border: none;
   min-width: 14em;
   max-width: 20em;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.8s, color 1.2s;
+  transition: background-color 0.5s, color 0.5s;
   font-weight: 500;
   margin: 0.5em;
   display: inline-block;
-  color: rgb(20, 1, 104);
+  color: rgb(8, 0, 39);
   text-decoration: none;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .button.active {
-  background: #030ffd;
+  background: #2732fd;
   color: #fff;
 }
 
