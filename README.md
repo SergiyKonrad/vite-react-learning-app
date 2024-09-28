@@ -18,26 +18,22 @@ Currently, two official plugins are used in this project:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) - Uses [Babel](https://babeljs.io/) for Fast Refresh.
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) - Uses [SWC](https://swc.rs/) for Fast Refresh.
 
-## Getting Started
+## To run the project locally, follow these steps:
 
-To run the project locally, follow these steps:
-
-### Installation
-
-## Clone the repository:
+### Clone the repository:
 
 ```bash
 git clone https://github.com/SergiyKonrad/vite-react-learning-app.git
 cd vite-react-app
 ```
 
-## Install the dependencies:
+### Install the dependencies:
 
 ```bash
 npm install
 ```
 
-## Running the App
+### Running the App
 
 To start the development server:
 
@@ -62,7 +58,7 @@ The production-ready files will be in the dist/ directory.
 This project is deployed to Vercel at the following link:
 [Vite React App on Vercel](https://vite-react-app-sigma.vercel.app/)
 
-You can deploy your Vite app to Vercel by following these steps:
+### You can deploy your Vite app to Vercel by following these steps:
 
 1. Create a new project on Vercel and connect it to your GitHub repository.
 2. Vercel will automatically build and deploy your project.
