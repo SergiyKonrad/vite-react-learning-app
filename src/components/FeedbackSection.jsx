@@ -68,21 +68,51 @@ export default function FeedbackSection() {
   const [name, setName] = useState('')
   const [hasErr, setHasErr] = useState(false)
   const [email, setEmail] = useState('')
+  const [feedback, setFeedback] = useState('')
 
   function handleNameChange(event) {
     setName(event.target.value)
     setHasErr(event.target.value.trim().length === 0)
   }
 
+  // function validateEmail(email) {
+  //   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  // }
+
   function handleSubmit(event) {
     event.preventDefault()
 
-    if (name.trim() === '' || email.trim() === '') {
+    if (
+      name.trim() === '' ||
+      email.trim() === '' ||
+      // !validateEmail(email) ||
+      feedback.trim() === ''
+    ) {
       setHasErr(true)
-      alert('Please fill in all fields.')
+      alert('Please fill in all fields and ensure the email is valid.')
     } else {
       setHasErr(false)
       // Handle the actual form submission logic (e.g., send data to API)
+      fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, feedback }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+          }
+          return response.json()
+        })
+        .then((data) => console.log('Success:', data))
+        .catch((error) => console.error('Error:', error))
+
+      alert(`Thank you for your feedback, ${name}!`)
+
+      setName('')
+      setEmail('')
+      setFeedback('')
+
       console.log('Form submitted:', { name, email })
     }
   }
@@ -100,6 +130,7 @@ export default function FeedbackSection() {
             value={name}
             style={{ border: hasErr ? '1px solid red' : null }}
             onChange={handleNameChange}
+            autoComplete="name"
           />
 
           <Label htmlFor="email">Your Email</Label>
@@ -110,6 +141,7 @@ export default function FeedbackSection() {
             value={email}
             style={{ border: hasErr ? '1px solid red' : null }}
             onChange={(event) => setEmail(event.target.value)}
+            autoComplete="email"
           />
 
           <Label htmlFor="feedback">Your Feedback</Label>
@@ -117,6 +149,8 @@ export default function FeedbackSection() {
             id="feedback"
             rows="5"
             placeholder="Enter your feedback"
+            value={feedback}
+            onChange={(event) => setFeedback(event.target.value)}
           ></Textarea>
 
           <Button disabled={hasErr} isActive={!hasErr} type="submit">
