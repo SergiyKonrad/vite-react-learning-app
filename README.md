@@ -27,7 +27,7 @@ To run the project locally, follow these steps:
 ## Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/vite-react-app.git
+git clone https://github.com/SergiyKonrad/vite-react-learning-app.git
 cd vite-react-app
 ```
 
@@ -73,4 +73,4 @@ Feel free to open an issue or submit a pull request if you'd like to contribute 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENCE) file for details.
