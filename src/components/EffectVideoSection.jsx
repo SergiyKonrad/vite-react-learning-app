@@ -24,7 +24,8 @@ export default function EffectVideoSection() {
           <h2>Explore and Learn with These Videos!</h2>
           <p>
             Discover the best tutorials to enhance your skills in React, Vite,
-            and JavaScript. Click the links below to watch the videos:
+            and JavaScript.<br></br>
+            <strong>Click the links below to watch the videos:</strong>
           </p>
           <div className="button-group">
             <Button>
