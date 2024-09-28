@@ -9,6 +9,7 @@ const Section = styled.section`
   border-radius: 10px;
   max-width: 600px;
   margin: 0 auto;
+  box-sizing: border-box;
 
   @media (prefers-color-scheme: dark) {
     background-color: #333; /* Dark mode background */
