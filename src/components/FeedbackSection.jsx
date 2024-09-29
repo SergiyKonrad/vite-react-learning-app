@@ -11,6 +11,16 @@ const Section = styled.section`
   margin: 0 auto;
   box-sizing: border-box;
 
+  @media (max-width: 480px) {
+    padding: 1em 1.5em;
+    max-width: 100%;
+  }
+
+  @media (max-width: 375px) {
+    padding: 0.4em 1em;
+    max-width: 100%;
+  }
+
   @media (prefers-color-scheme: dark) {
     background-color: #333; /* Dark mode background */
   }
@@ -51,7 +61,15 @@ const Control = styled.input`
      color: #777;
     line-height: 1.5;
 
-   
+     @media (max-width: 480px) {
+    padding: 0.4em 0.8em;
+  }
+
+  @media (max-width: 375px) {
+    padding: 0.3em 0.6em;
+  }
+
+
   @media (prefers-color-scheme: dark) {
     // color: #555;
 

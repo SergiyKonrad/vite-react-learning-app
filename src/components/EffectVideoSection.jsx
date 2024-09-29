@@ -15,7 +15,7 @@ export default function EffectVideoSection() {
 
   return (
     <section>
-      <h3 style={{ marginTop: '2em' }}>Recommended YouTube Video</h3>
+      <h3 style={{ marginTop: '1.8em' }}>Recommended YouTube Video</h3>
 
       <Button onClick={openModal}>Click to Open</Button>
 
@@ -60,7 +60,7 @@ export default function EffectVideoSection() {
           </div>
 
           <Button onClick={closeModal} className="close-button">
-            Close
+            Click to Close
           </Button>
         </div>
       </Modal>
