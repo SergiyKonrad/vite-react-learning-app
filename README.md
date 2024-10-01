@@ -29,7 +29,7 @@ git clone https://github.com/SergiyKonrad/vite-react-learning-app.git
 Move to the project directory:
 
 ```
-cd vite-react-app
+cd vite-react-learning-app
 ```
 
 ### Install the dependencies:
@@ -46,7 +46,9 @@ To start the development server:
 npm run dev
 ```
 
-Open http://localhost:5173 to view the app in the browser.
+Once the development server is running, open your browser and navigate to: http://localhost:5173
+
+Alternatively, if your terminal supports it, you can hold the "o" key and press Enter to automatically open the app in the browser.
 
 ## Building for Production
 
@@ -57,11 +59,6 @@ npm run build
 ```
 
 The production-ready files will be in the dist/ directory.
-
-## Deployment
-
-This project is deployed to Vercel at the following link:
-[Vite React App on Vercel](https://vite-react-app-sigma.vercel.app/)
 
 ### You can deploy your Vite app to Vercel by following these steps:
 

@@ -1,6 +1,6 @@
 {
-  "name": "Vite React Learning App",
-  "short_name": "ViteReactLearn",
+  "name": "vite-react-learning-app",
+  "short_name": "ViteLearning",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
